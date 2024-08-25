@@ -3,8 +3,8 @@ import requests
 import random
 
 # logic
-def generate(length):
-    if length != int:
+def generate(length=None):
+    if length is None or not isinstance(length, int):
         length = 7
     url = f'https://random-word-api.herokuapp.com/word?length={length}'
     resp = requests.get(url=url)
