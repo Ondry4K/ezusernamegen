@@ -3,7 +3,6 @@ import sys
 
 requirements = [
     'requests',
-    'random',
 ]
 
 if sys.platform != 'win32':
@@ -21,7 +20,6 @@ setup(
     packages=find_packages(),
     install_requires=[
         'requests',
-        'random',
     ],
     classifiers=[
         'Programming Language :: Python :: 3',
