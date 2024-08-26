@@ -14,6 +14,6 @@ def generate(length=None, noNum=None):
     if noNum is None or noNum is False:
         final = ''.join(data) + str(randomnum)
     elif noNum is True:
-        final = data
+        final = ''.join(data)
     
     return final
