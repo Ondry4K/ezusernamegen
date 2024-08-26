@@ -10,7 +10,7 @@ if sys.platform != 'win32':
 
 setup(
     name='ezusergen',
-    version='0.1.2',
+    version='0.1.3',
     description='A simple username generator that combines random words with numbers',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
