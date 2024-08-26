@@ -2,8 +2,8 @@
 import requests
 import random
 
-# logic
-def generate(length=None):
+# logic (updated)
+def generate(length=None, noNum=None):
     if length is None or not isinstance(length, int):
         length = 7
     url = f'https://random-word-api.herokuapp.com/word?length={length}'
@@ -11,6 +11,9 @@ def generate(length=None):
     resp2 = requests.get(url=url)
     data = [word.capitalize() for word in (resp.json() + resp2.json())]
     randomnum = random.randint(127, 999)
-    final = ''.join(data) + str(randomnum)
-
+    if noNum is None or not True:
+        final = ''.join(data) + str(randomnum)
+    else:
+        final = data
+    
     return final
