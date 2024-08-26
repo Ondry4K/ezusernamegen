@@ -11,7 +11,7 @@ def generate(length=None, noNum=None):
     resp2 = requests.get(url=url)
     data = [word.capitalize() for word in (resp.json() + resp2.json())]
     randomnum = random.randint(127, 999)
-    if noNum is None or not True:
+    if noNum is None or noNum is False:
         final = ''.join(data) + str(randomnum)
     else:
         final = data
