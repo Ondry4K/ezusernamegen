@@ -13,7 +13,7 @@ def generate(length=None, noNum=None):
     randomnum = random.randint(127, 999)
     if noNum is None or noNum is False:
         final = ''.join(data) + str(randomnum)
-    else:
+    elif noNum is True:
         final = data
     
     return final
